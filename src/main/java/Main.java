@@ -7,14 +7,16 @@ public class Main {
 
     public static void main(String[] args){
         Random rd = new Random();
-        int num=101;
+        int num;
         int oldGuess=0;
         int counter=0;
+
         int rand=(rd.nextInt(100));
+
+
         Scanner in= new Scanner(System.in);
         System.out.println("select your number 1-100");
-               while(num != rand) {
-
+        do {
 
                    num = in.nextInt();
 
@@ -29,9 +31,9 @@ public class Main {
                    oldGuess = num;
                    counter++;
 
-
-
                }
+        while(num != rand);
+
         System.out.println("Correct the number was "+rand+" it took you "+counter+" guesses");
 
     }
